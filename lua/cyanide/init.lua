@@ -7,6 +7,7 @@ M.setup = function()
   vim.g.colors_name = "cyanide"
 
   local Palette = {
+    -- Background = "none",
     Background = "#191919",
     White = "#F8F8F8",
 
@@ -25,7 +26,7 @@ M.setup = function()
     Keyword = "#FF4083",
     Type = "#66D9EF",
 
-    Error = "#F92900",
+    Error = "#D90202",
     Warning = "#F48D17",
     Info = "#FFD739",
     Hint = "#3570D7",
