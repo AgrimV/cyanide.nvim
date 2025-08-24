@@ -38,6 +38,7 @@ M.setup = function()
     Remove = "#C30000",
   }
 
+  -- INFO: Possible values for highlight_value table
   -- fg
   -- bg
   -- bold
