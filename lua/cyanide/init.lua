@@ -126,7 +126,7 @@ M.setup = function()
   set_highlight("@variable.builtin", { fg = Palette.Text, bold = true })
   set_highlight("@variable.parameter", { fg = Palette.Params })
   set_highlight("@variable.parameter.builtin", { fg = Palette.Params, bold = true })
-  set_highlight("@variable.member", { fg = Palette.Params, italic = true })
+  set_highlight("@variable.member", { fg = Palette.Params })
 
   set_highlight("@constant", { fg = Palette.Constant })
   set_highlight("@constant.builtin", { fg = Palette.Constant, bold = true })
@@ -134,7 +134,7 @@ M.setup = function()
 
   set_highlight("@module", { fg = Palette.Text })
   set_highlight("@module.builtin", { fg = Palette.Text, bold = true })
-  set_highlight("@label", { fg = Palette.Keyword, italic = true })
+  set_highlight("@label", { fg = Palette.Keyword })
 
   set_highlight("@string", { fg = Palette.String })
   set_highlight("@string.documentation", { fg = Palette.String })
