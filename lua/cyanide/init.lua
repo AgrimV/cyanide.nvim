@@ -1,6 +1,10 @@
 local M = {}
 
-M.setup = function()
+M.setup = function(opts)
+  if opts ~= nil then
+    require("cyanide.colors").setup(opts)
+  end
+
   vim.cmd("highlight clear")
   vim.o.background = "dark"
   vim.o.termguicolors = true
@@ -10,33 +14,7 @@ M.setup = function()
     vim.api.nvim_set_hl(0, highlight_group, highlight_value)
   end
 
-  local Palette = {
-    -- Background = "none",
-    Background = "#191919",
-    Text = "#F8F8F8",
-
-    Find = "#FFE792",
-    Selection = "#444444",
-    Line = "#555555",
-    Highlight = "#333333",
-    Poison = "#7FB11B",
-
-    Comment = "#696969",
-    Constant = "#BE84FF",
-    Function = "#AEE837",
-    Keyword = "#FF4083",
-    String = "#FFE792",
-    Params = "#FFA940",
-    Type = "#66D9EF",
-
-    Error = "#D90202",
-    Warning = "#F48D17",
-    Info = "#FFD739",
-    Hint = "#3570D7",
-
-    Add = "#22CB00",
-    Remove = "#C30000",
-  }
+  local Palette = require("cyanide.colors")
 
   -- INFO: Possible values for highlight_value table
   -- fg

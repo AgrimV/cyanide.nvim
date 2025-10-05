@@ -1,5 +1,7 @@
+local Parent = require("cyanide.colors")
+
 local Palette = {
-  Background = "#191919",
+  Background = Parent.Background,
 
   -- Mode
   Normal = "#1E4875",
