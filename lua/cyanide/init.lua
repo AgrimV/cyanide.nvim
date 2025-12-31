@@ -28,7 +28,7 @@ M.setup = function(opts)
 
   local highlight_map = {
     -- Editor
-    CurSearch = { bg = Palette.Find, fg = Palette.Background },
+    CurSearch = { bg = Palette.String, fg = Palette.Background },
     Cursor = { reverse = true },
     CursorColumn = { bg = Palette.Line },
     CursorLine = { link = "CursorColumn" },
