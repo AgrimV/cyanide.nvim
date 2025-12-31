@@ -71,19 +71,19 @@ M.setup = function(opts)
     Repeat = { fg = Palette.Keyword },
     Label = { fg = Palette.Keyword },
     Operator = { fg = Palette.Keyword },
-    Keyword = { fg = Palette.Keyword, bold = true },
+    Keyword = { fg = Palette.Keyword },
     Exception = { fg = Palette.Keyword },
     PreProc = { fg = Palette.Type },
     Include = { fg = Palette.Type },
     Define = { fg = Palette.Type },
     PreCondit = { fg = Palette.Type },
     Type = { fg = Palette.Type },
-    StorageClass = { fg = Palette.Keyword },
-    Structure = { fg = Palette.Text },
-    Typedef = { fg = Palette.Keyword },
+    StorageClass = { fg = Palette.Type },
+    Structure = { fg = Palette.Type },
+    Typedef = { fg = Palette.Type },
     Underlined = { underline = true },
     Error = { fg = Palette.Error },
-    Todo = { fg = Palette.Text, bg = Palette.Poison },
+    Todo = { fg = Palette.Text, bg = Palette.Function },
     Added = { fg = Palette.Add },
     Changed = { fg = Palette.Info },
     Removed = { fg = Palette.Remove },
@@ -124,34 +124,34 @@ M.setup = function(opts)
   set_highlight("@string.special.url", { fg = Palette.String, underline = true })
 
   set_highlight("@character", { fg = Palette.String })
-  set_highlight("@character.special", { fg = Palette.Type })
+  set_highlight("@character.special", { fg = Palette.Keyword })
 
   set_highlight("@boolean", { fg = Palette.Constant })
   set_highlight("@number", { fg = Palette.Constant })
   set_highlight("@number.float", { fg = Palette.Constant })
 
-  set_highlight("@type", { fg = Palette.Poison })
+  set_highlight("@type", { fg = Palette.Type })
   set_highlight("@type.builtin", { fg = Palette.Type, bold = true })
-  set_highlight("@type.definition", { fg = Palette.Type, bold = true })
+  set_highlight("@type.definition", { fg = Palette.Type })
 
-  set_highlight("@attribute", { fg = Palette.Text, italic = true })
-  set_highlight("@attribute.builtin", { fg = Palette.Text, bold = true, italic = true })
-  set_highlight("@property", { fg = Palette.Text, italic = true })
+  set_highlight("@attribute", { fg = Palette.Params, italic = true })
+  set_highlight("@attribute.builtin", { fg = Palette.Params, bold = true })
+  set_highlight("@property", { fg = Palette.Params })
 
-  set_highlight("@function", { fg = Palette.Poison })
-  set_highlight("@function.builtin", { fg = Palette.Poison, bold = true })
-  set_highlight("@function.call", { fg = Palette.Poison })
-  set_highlight("@function.macro", { fg = Palette.Poison })
+  set_highlight("@function", { fg = Palette.Function })
+  set_highlight("@function.builtin", { fg = Palette.Function, bold = true })
+  set_highlight("@function.call", { fg = Palette.Function })
+  set_highlight("@function.macro", { fg = Palette.Function })
 
-  set_highlight("@function.method", { fg = Palette.Poison })
-  set_highlight("@function.method.call", { fg = Palette.Poison })
+  set_highlight("@function.method", { fg = Palette.Function })
+  set_highlight("@function.method.call", { fg = Palette.Function })
 
   set_highlight("@constructor", { fg = Palette.Type })
   set_highlight("@operator", { fg = Palette.Keyword })
 
   set_highlight("@keyword", { fg = Palette.Keyword })
   set_highlight("@keyword.coroutine", { fg = Palette.Keyword })
-  set_highlight("@keyword.function", { fg = Palette.Type, bold = true })
+  set_highlight("@keyword.function", { fg = Palette.Keyword })
   set_highlight("@keyword.operator", { fg = Palette.Keyword })
   set_highlight("@keyword.import", { fg = Palette.Keyword })
   set_highlight("@keyword.type", { fg = Palette.Type, bold = true })
@@ -164,27 +164,27 @@ M.setup = function(opts)
   set_highlight("@keyword.conditional", { fg = Palette.Keyword })
   set_highlight("@keyword.conditional.ternary", { fg = Palette.Keyword })
 
-  set_highlight("@keyword.directive", { fg = Palette.Keyword })
-  set_highlight("@keyword.directive.define", { fg = Palette.Keyword })
+  set_highlight("@keyword.directive", { fg = Palette.Type })
+  set_highlight("@keyword.directive.define", { fg = Palette.Type })
 
-  set_highlight("@punctuation.delimiter", { fg = Palette.Text, bold = true })
-  set_highlight("@punctuation.bracket", { fg = Palette.Type, bold = true })
-  set_highlight("@punctuation.special", { fg = Palette.Keyword, bold = true })
+  set_highlight("@punctuation.delimiter", { fg = Palette.Type })
+  set_highlight("@punctuation.bracket", { fg = Palette.Type })
+  set_highlight("@punctuation.special", { fg = Palette.Type })
 
   set_highlight("@comment", { fg = Palette.Comment, italic = true })
   set_highlight("@comment.documentation", { fg = Palette.Comment, italic = true })
 
-  set_highlight("@comment.error", { fg = Palette.Text, bg = Palette.Error })
-  set_highlight("@comment.warning", { fg = Palette.Text, bg = Palette.Warning })
-  set_highlight("@comment.todo", { fg = Palette.Text, bg = Palette.Hint })
-  set_highlight("@comment.note", { fg = Palette.Background, bg = Palette.Info })
+  set_highlight("@comment.error", { fg = Palette.Text, bg = Palette.Error, italic = true })
+  set_highlight("@comment.warning", { fg = Palette.Text, bg = Palette.Warning, italic = true })
+  set_highlight("@comment.todo", { fg = Palette.Text, bg = Palette.Function, italic = true })
+  set_highlight("@comment.note", { fg = Palette.Text, bg = Palette.Info, italic = true })
 
   set_highlight("@diff.plus", { fg = Palette.Add })
   set_highlight("@diff.minus", { fg = Palette.Remove })
   set_highlight("@diff.delta", { fg = Palette.Info })
 
   set_highlight("@tag", { fg = Palette.Type })
-  set_highlight("@tag.builtin", { fg = Palette.Keyword })
+  set_highlight("@tag.builtin", { fg = Palette.Type, bold = true })
   set_highlight("@tag.attribute", { fg = Palette.Type })
   set_highlight("@tag.delimiter", { fg = Palette.Type })
 end

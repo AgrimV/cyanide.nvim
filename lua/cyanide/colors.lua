@@ -2,15 +2,14 @@ local M = {
   Background = "#191919",
   Text = "#F8F8F8",
 
-  Find = "#FFE792",
   Selection = "#444444",
   Line = "#555555",
-  Highlight = "#333333",
   Poison = "#7FB11B",
 
   Comment = "#696969",
   Constant = "#BE84FF",
-  Function = "#AEE837",
+  Function = "#7FB11B",
+  -- Function = "#AEE837",
   Keyword = "#FF4083",
   String = "#FFE792",
   Params = "#FFA940",
@@ -21,8 +20,8 @@ local M = {
   Info = "#FFD739",
   Hint = "#3570D7",
 
-  Add = "#22CB00",
-  Remove = "#C30000",
+  Add = "#2DBA4E",
+  Remove = "#F0440A",
 }
 
 M.setup = function(opts)
